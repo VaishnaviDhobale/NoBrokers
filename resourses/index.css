@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(117, 110, 110);
+}
+.logo {
+  height: 40px;
+}
+.menu-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav-btn {
+  margin-right: 10px;
+}
+.custom-navbar-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.sub-span {
+  color: gray;
+  font-weight: 600;
+}
+#persentSign {
+  color: white;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.btn-info {
+  background-color: teal;
+  color: white;
+  font-weight: 700;
+}
+.text-decoration-none {
+  text-decoration: none;
+  color: rgb(117, 110, 110);
+  font-weight: 600;
+  border-right: 1px solid #dcdcdc;
+  padding-right: 15px;
+}
+
+/* main design start  */
+.main {
+  margin-top: 50px;
+}
+.interiors {
+  background-color: #fef1d9;
+  border-radius: 2px;
+  position: relative;
+}
+.userActionNav {
+  border: 1px solid #dcdcdc;
+  height: 62px;
+}
+.userActionNav p {
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.userActionNav p:hover {
+  color: rgb(241, 113, 113);
+  font-weight: bold;
+  border-bottom: 5px solid red;
+  cursor: pointer;
+}
+
+/* form  */
+/* form {
+  border: 1px solid rgb(198, 190, 190);
+} */
+.top {
+  border: 1px solid #dcdcdc;
+  width: 900px;
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  font-size: 18px;
+}
+.top > * {
+  border: none;
+  border-left: 1px solid #dcdcdc;
+  padding: 15px;
+  outline: none;
+  font-weight: 600;
+}
+.submit,
+#submit-btn {
+  background-color: rgb(235, 76, 76);
+  color: white;
+  border: none;
+  text-align: center;
+}
+.submit:hover {
+  cursor: pointer;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  border: 1px solid #dcdcdc;
+  padding: 10px;
+}
+.bottom * {
+  padding: 4px;
+}
+
+/* footer  */
+
+footer {
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.footer-info {
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+}
+.btn-info {
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
