@@ -15,50 +15,46 @@
     />
     <link rel="stylesheet" href="./resourses/index.css" />
   </head>
-  <body>
+  <body class="text-body-secondary">
     <!-- navbar  -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2">
-      <div
-        class="d-flex justify-content-between align-items-center w-100 custom-navbar-container"
-      >
+      <div class="d-flex justify-content-between align-items-center w-100 px-1">
         <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <p
-            id="persentSign"
-            class="d-flex justify-content-center align-items-center mb-0"
-          >
-            %
-          </p>
-          <span class="fw-bold">NO<span class="sub-span">BROKER</span></span>
-        </a>
+        <img  class="logo cursor-pointer" src="./resourses/assets/logo.png" alt="Logo">
 
         <!-- Right Side -->
         <div class="ms-auto d-flex align-items-center">
-          <button class="btn btn-outline-secondary btn-sm nav-btn me-4">
-            <i class="fa-solid fa-cash-register"></i> | Pay Rent
-          </button>
-          <button class="btn btn-info btn-sm nav-btn me-4">
-            For Property owners
-          </button>
-          <a href="#" class="text-decoration-none me-3">Sign up</a>
-          <a href="#" class="text-decoration-none me-3">Log in</a>
-          <span class="menu-icon fw-semibold">&#9776; Menu</span>
+          <div class="navBtns">
+            <button class="btn btn-outline-secondary me-3">
+              <i class="fa-solid fa-cash-register"></i> | Pay Rent
+            </button>
+            <button class="btn btn-info mr-1 me-3">Post Your Property</button>
+          </div>
+          <div class="navAContainer">
+            <a href="#" class="text-decoration-none text-secondary me-3"
+              >Sign up</a
+            >
+            <a href="#" class="text-decoration-none text-secondary me-3"
+              >Log in</a
+            >
+            <span class="menu-icon cursor-pointer me-2">&#9776; Menu</span>
+          </div>
         </div>
       </div>
     </nav>
 
     <!-- main  -->
     <main
-      class="container main d-flex justify-content-center flex-column align-items-center"
+      class="container main d-flex justify-content-center flex-column align-items-center mt-5"
     >
       <!-- heading  -->
       <h3 class="h3">World's Largest NoBrokerage Property Site</h3>
 
       <!-- interiors -->
       <div
-        class="interiors d-flex justify-content-center align-items-center pt-2 px-2 mt-3"
+        class="interiors d-flex justify-content-center align-items-center pt-2 px-2 mt-2"
       >
-        <p>
+        <p class="home">
           <i class="fa-solid fa-house-user"></i> Home Interiors | &nbsp;&nbsp;<i
             class="fa-solid fa-hand-holding-heart"
           ></i>
@@ -68,35 +64,43 @@
 
       <!-- User Actions -->
       <section>
-        <div class="userActionNav p-2 pb-0 mt-4 m-auto">
-          <div class="nav pl-5 d-flex justify-content-between gap-4 px-4">
-            <p id="buy">Buy</p>
-            <p id="rent">Rent</p>
-            <p id="commercial">Commercial</p>
+        <div class="userActionNav p-2 pb-0 mt-4">
+          <div class="pl-5 d-flex justify-content-between gap-4 px-4">
+            <a href="#buy">Buy</a>
+            <a href="#rent">Rent</a>
+            <a href="#commercial">Commercial</a>
           </div>
         </div>
       </section>
-      <section id="form">
-        <form action="">
-          <div class="top">
+      <section>
+        <!-- buy  -->
+        <form action="" id="buy" class="d-none justify-content-center align-items-center flex-column">
+          <div class="top row">
             <!-- select  -->
-            <select name="city" id="city">
+            <select name="city" id="city" class="col-2">
               <option value="banglore">Banglore</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="delhi">Delhi</option>
+              <option value="bangalore">Bangalore</option>
+              <option value="chennai">Chennai</option>
+              <option value="kolkata">Kolkata</option>
             </select>
 
             <!-- search  -->
             <input
               type="search"
               id="search"
+              class="col-8"
               placeholder="Search upto 3 localities or landmarks"
             />
 
             <!-- submit btn  -->
-            <div class="submit">
+            <div class="submit col-2">
               <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="submit" value="Search" id="submit-btn" />
+              <input type="submit" value="Search" class="" id="submit-btn" />
             </div>
           </div>
+
           <div class="bottom">
             <div class="redios">
               <input type="radio" name="address" id="fullHouse" />
@@ -107,24 +111,139 @@
             </div>
             <select name="bhk" id="bhk">
               <option value="">BHK Type</option>
+              <option value="1bhk">1 BHK</option>
+              <option value="2bhk">2 BHK</option>
+              <option value="3bhk">3 BHK</option>
+              <option value="4bhk">4 BHK</option>
+              <option value="5bhk">5 BHK</option>
             </select>
 
             <select name="property" id="property">
               <option value="">Property Status</option>
+              <option value="readyToMove">Ready to Move</option>
+              <option value="underConstruction">Under Construction</option>
+              <option value="newLaunch">New Launch</option>
+              <option value="resale">Resale</option>
             </select>
             <div>
               <input type="checkbox" id="project" />
-              <label for="project">New Builder Project</label>
+              <label for="project" name="newBuilder">New Builder Project</label>
             </div>
           </div>
+
+        </form>
+
+        <!-- rent  -->
+         <form action="" id="rent" class="d-none justify-content-center align-items-center flex-column">
+          <div class="top row">
+            <!-- select  -->
+            <select name="city" id="city" class="col-2">
+              <option value="banglore">Banglore</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="delhi">Delhi</option>
+              <option value="bangalore">Bangalore</option>
+              <option value="chennai">Chennai</option>
+              <option value="kolkata">Kolkata</option>
+            </select>
+
+            <!-- search  -->
+            <input
+              type="search"
+              id="search"
+              class="col-8"
+              placeholder="Search upto 3 localities or landmarks"
+            />
+
+            <!-- submit btn  -->
+            <div class="submit col-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="submit" value="Search" class="" id="submit-btn" />
+            </div>
+          </div>
+
+          <div class="bottom">
+            <div class="redios">
+              <input type="radio" name="address" id="fullHouse" />
+              <label for="fullHouse"> Full House</label>
+
+              <input type="radio" name="address" id="land" />
+              <label for="pg">PG/Hostel</label>
+
+              <input type="radio" name="address" id="land" />
+              <label for="flat">Flatmates</label>
+            </div>
+            <select name="bhk" id="bhk">
+              <option value="">BHK Type</option>
+              <option value="1bhk">1 BHK</option>
+              <option value="2bhk">2 BHK</option>
+              <option value="3bhk">3 BHK</option>
+              <option value="4bhk">4 BHK</option>
+              <option value="5bhk">5 BHK</option>
+            </select>
+
+            <select name="availability" id="availability">
+              <option value="">Availability</option>
+            </select>
+          </div>
+
+        </form>
+
+        <!--  commercial -->
+         <form id="commercial" class="d-none justify-content-center align-items-center flex-column">
+          <div class="top row">
+            <!-- select  -->
+            <select name="city" id="city" class="col-2">
+              <option value="banglore">Banglore</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="delhi">Delhi</option>
+              <option value="bangalore">Bangalore</option>
+              <option value="chennai">Chennai</option>
+              <option value="kolkata">Kolkata</option>
+            </select>
+
+            <!-- search  -->
+            <input
+              type="search"
+              id="search"
+              class="col-8"
+              placeholder="Search upto 3 localities or landmarks"
+            />
+
+            <!-- submit btn  -->
+            <div class="submit col-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="submit" value="Search" class="" id="submit-btn" />
+            </div>
+          </div>
+
+          <div class="bottom">
+            <div class="redios">
+              <input type="radio" name="address" id="fullHouse" />
+              <label for="fullHouse"> Full House</label>
+
+              <input type="radio" name="address" id="land" />
+              <label for="pg">PG/Hostel</label>
+
+              <input type="radio" name="address" id="land" />
+              <label for="flat">Flatmates</label>
+            </div>
+            <select name="property" id="property">
+              <option value="">Property Status</option>
+              <option value="readyToMove">Ready to Move</option>
+              <option value="underConstruction">Under Construction</option>
+              <option value="newLaunch">New Launch</option>
+              <option value="resale">Resale</option>
+            </select>
+          </div>
+
         </form>
       </section>
     </main>
     <footer>
       <div class="footer-info">
-        <hr>
+        <hr />
         <p>Are you a Property Owner?</p>
-        <hr>
+        <hr />
       </div>
       <button class="btn-info">Post Free Property Ad</button>
     </footer>
